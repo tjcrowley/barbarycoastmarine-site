@@ -142,17 +142,20 @@
           <p>Looking to modernize compliance and reliability across your fleet?</p>
           <p><strong>Darren McKeeman</strong><br/>Founder, Barbary Coast Marine</p>
           <p>
-            <a href="mailto:info@barbarycoastmarine.com">info@barbarycoastmarine.com</a><br/>
-            <a href="tel:+14158507872">(415) 850-7872</a>
+            <a href="mailto:info@barbarycoastmarine.com">info@barbarycoastmarine.com</a>
           </p>
         </div>
-        <form class="contact-form" action="mailto:info@barbarycoastmarine.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="https://formsubmit.co/info@barbarycoastmarine.com" method="POST">
+          <input type="hidden" name="_subject" value="New Barbary Coast Marine website inquiry" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://barbarycoastmarine.com/#contact" />
           <label>Name<input name="name" required /></label>
           <label>Email<input type="email" name="email" required /></label>
           <label>Company<input name="company" /></label>
           <label>Message<textarea name="message" rows="4" required></textarea></label>
           <button class="btn btn-primary" type="submit">Send Inquiry</button>
-          <small>Prefer direct contact? Email info@barbarycoastmarine.com.</small>
+          <small>Submissions are sent securely to info@barbarycoastmarine.com.</small>
         </form>
       </div>
     </section>
