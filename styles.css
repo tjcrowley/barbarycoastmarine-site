@@ -271,7 +271,7 @@ input, textarea {
 /* Get Started / pricing page */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   align-items: start;
 }
@@ -301,7 +301,8 @@ input, textarea {
 .plan ul { color: var(--muted); padding-left: 1.2rem; margin: 0 0 1.3rem; display: grid; gap: 0.35rem; }
 .plan .btn { width: 100%; text-align: center; }
 .pay-note { color: var(--muted); font-size: 0.92rem; margin-top: 1.2rem; }
+.fleet-note { color: var(--muted); font-size: 0.85rem; margin-top: 0.75rem; text-align: center; }
 
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .pricing-grid { grid-template-columns: 1fr; }
 }
