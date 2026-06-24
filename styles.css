@@ -205,6 +205,30 @@ input, textarea {
   padding: 1rem 0;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 @media (max-width: 860px) {
   .hero-grid,
   .contact-wrap,
@@ -213,7 +237,36 @@ input, textarea {
     grid-template-columns: 1fr;
   }
 
-  nav { display: none; }
+  .nav-toggle { display: flex; }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(7, 16, 24, 0.97);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  nav.open { display: flex; }
+
+  nav a {
+    margin: 0;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav a:last-child { border-bottom: none; }
+
+  .site-header { position: sticky; }
 }
 /* Get Started / pricing page */
 .pricing-grid {
